@@ -29,6 +29,10 @@
       "full"
     ]
   },
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css"
 }

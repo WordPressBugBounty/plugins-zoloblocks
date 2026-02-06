@@ -3,9 +3,9 @@ Contributors: bdthemes, selimmw, mizan42047, abutalib, muhammadasik, shamim496
 Donate link: http://zoloblocks.com/
 Tags: blocks, editor, gutenberg, gutenberg blocks, dynamic content
 Requires at least: 6.1
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 2.3.11
+Stable tag: 2.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -596,6 +596,9 @@ Yes, the plugin is optimized to let you harvest all of your SEO goals easily. Wi
 = Will these slow down my site? =
 Not at all. We have optimized all of these blocks for better performance.
 
+= Where do I report security bugs found in this plugin? =
+Please report security bugs found in the source code of the ZoloBlocks plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/1b60e035-ed99-4a70-a2c8-5c2cf4405e68). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+
 == Screenshots ==
 
 1. ZoloBlocks Page Builder Blocks Addons for Gutenberg
@@ -607,6 +610,82 @@ Not at all. We have optimized all of these blocks for better performance.
 7. Check out our others popular plugin
 
 == Changelog ==
+
+### 2.6.0 [February 05, 2026]
+
+### Added
+- Introduced Class Manager for easy customization
+- Extended the flexbox with overflow option
+
+### Fixed
+- Resolved table of content block issues
+- Added post category (style 4) preset
+- Fixed spacing issue in advanced heading block
+
+### 2.5.2 [January 13, 2026]
+
+- **Improvements:**
+  - Fixed: Resolved minor user interface inconsistencies for improved user experience
+
+
+### 2.5.1 [January 6, 2026]
+
+- **New Features:**
+  - Added Custom Masking option for the Image block. (pro)
+
+- **Fixes:**
+  - Fixed the dual button color issue.
+
+### 2.5.0 [December 31, 2025]
+
+- **New Features:**
+  - Added Flexbox block
+  - Added Circle Info block (pro)
+  - Added Switcher block (pro)
+
+### 2.4.0 [December 4, 2025]
+
+**Bug Fixes:**
+WordPress latest version compatibility issues are fixed
+Template library importing issues are fixed
+
+### Version 2.3.18 - November 20, 2025
+
+* **Improved:** System and Notice updates for improved stability and reliability.
+
+### Version 2.3.17 - November 12, 2025
+- **Bug Fixes:**
+  - System update and Notice update
+
+### Version 2.3.16 - November 11, 2025
+
+- **Bug Fixes:**
+  - System update and Notice update
+
+### Version 2.3.15 - November 10, 2025
+
+- **Bug Fixes:**
+  - Resolved Template Library pages and templates imported issue.
+
+### Version 2.3.14 - November 6, 2025
+
+- **Bug Fixes:**
+  - Resolved Template Library broken issue. (Template Library API changed. Please update the plugin to the latest version.)
+
+### Version 2.3.13 - October 21, 2025
+
+- **Bug Fixes:**
+  - Resolved vulnerability in the Title Block.
+  - The Transform Effect is now treated as a separate extension.
+  - Fixed issues with the Particles extension.
+
+### 2.3.12 [October 13, 2025]
+
+**Maintenance Release:**
+Navigation Block click issue fixed
+Fixed vulnerabilities related to Server-Side Request Forgery (SSRF) and Cross-Site Scripting (XSS).
+Enhanced overall request handling to prevent unauthorized external requests.
+General code cleanup and minor performance improvements.
 
 ### 2.3.11 [September 28, 2025]
 
@@ -705,3 +784,4 @@ This version includes minor bug fixes and improvements to maintain optimal perfo
 * Addressed theme color palette issues for consistent appearance across all blocks
 
 Details [changelog here](https://feedback.zoloblocks.com/announcements)
+

@@ -1,21 +1,22 @@
 <?php
+
 use Zolo\Helpers\ZoloHelpers;
-$titleHTML = '';
 
-if ( ! empty( $settings['showTitle'] ) ) {
-	$post_title = wp_kses( $result->title, 'post' );
-	$post_title = ! empty( $settings['titleWords'] ) ?
-		ZoloHelpers::wordcount( $post_title, $settings['titleWords'] ) : $post_title;
+$zolo_titleHTML = '';
 
-	$titleHTML .= sprintf(
+if (! empty($settings['showTitle'])) {
+	$zolo_post_title = wp_kses($zolo_result->title, 'post');
+	$zolo_title_tag  = ZoloHelpers::sanitize_html_tag($settings['titleTag'] ?? 'h2');
+	$zolo_post_title = ! empty($settings['titleWords']) ? ZoloHelpers::wordcount($zolo_post_title, $settings['titleWords']) : $zolo_post_title;
+	$zolo_url        = esc_url(get_permalink($zolo_result->ID));
+	$zolo_titleHTML .= sprintf(
 		'<%1$s class="zolo-post-title">
-            <a href="%2$s" title="%3$s">%4$s</a>
+            <a href="%2$s" title="%3$s">%3$s</a>
         </%1$s>',
-		$settings['titleTag'],
-		get_permalink( $result->ID ),
-		esc_attr( $post_title ),
-		$post_title
+		$zolo_title_tag,
+		$zolo_url,
+		$zolo_post_title
 	);
 }
 
-return $titleHTML;
+return $zolo_titleHTML;

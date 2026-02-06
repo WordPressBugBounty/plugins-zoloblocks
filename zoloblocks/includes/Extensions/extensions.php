@@ -170,5 +170,21 @@ return apply_filters('zolo_extensions', [
         'is_pro' => true,
         'demo' => 'https://demo.zoloblocks.com/image-parallax',
         'video' => 'https://www.youtube.com/watch?v=mMT88v_xQig&t',
-    ]
+    ],
+    'transform' => [
+        'name' => 'transform',
+        'title' => __('Transform', 'zoloblocks'),
+        'status' => true,
+        'is_pro' => false,
+        'demo' => 'https://demo.zoloblocks.com/transform',
+        'video' => 'https://www.youtube.com/watch?v=mMT88v_xQig&t',
+    ],
+    'class-manager' => [
+        'name' => 'class-manager',
+        'title' => __('Class Manager', 'zoloblocks'),
+        'status' => true,
+        'is_pro' => false,
+        'demo' => 'https://demo.zoloblocks.com/class-manager',
+        'video' => 'https://www.youtube.com/watch?v=mMT88v_xQig&t',
+    ],
 ]);

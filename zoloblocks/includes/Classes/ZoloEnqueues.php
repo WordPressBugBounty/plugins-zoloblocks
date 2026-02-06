@@ -270,7 +270,7 @@ if (! class_exists('ZoloEnqueues')) {
                 wp_enqueue_style(
                     'zolo-editor-common-style',
                     trailingslashit(ZOLO_ADMIN_URL) . 'build/editor-common/style-index.css',
-                    $editor_common_dep['dependencies'],
+                    [],
                     $editor_common_dep['version'],
                     'all'
                 );
@@ -369,6 +369,7 @@ if (! class_exists('ZoloEnqueues')) {
                     'notice'          => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/notice.svg',
                     'textPath'        => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/text-path.svg',
                     'qrcode'          => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/qrcode.svg',
+                    'dualButton'      => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/dual-button.svg',
                 ])
             ]);
 
@@ -389,6 +390,7 @@ if (! class_exists('ZoloEnqueues')) {
                 'upkBrand'         => trailingslashit(ZOLO_ADMIN_URL) . 'assets/images/upk-brand.svg',
                 'popupBg'          => trailingslashit(ZOLO_ADMIN_URL) . 'assets/images/popup-bg.svg',
                 'zoloLogo'          => trailingslashit(ZOLO_ADMIN_URL) . 'assets/images/zoloblocks-logo.png',
+                'zoloImage'        => trailingslashit(ZOLO_ADMIN_URL) . 'assets/images/zolo.png',
             ]);
         }
 
