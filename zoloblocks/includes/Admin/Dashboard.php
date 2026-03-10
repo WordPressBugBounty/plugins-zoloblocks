@@ -40,6 +40,7 @@ if (! class_exists('Dashboard')) {
          * @return void
          */
         public function handle_tab_redirect() {
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $current_page = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
 
             // Only redirect for specific tab pages
@@ -81,6 +82,8 @@ if (! class_exists('Dashboard')) {
          */
 
         public function enqueue_scripts() {
+            global $pagenow;
+            if ($pagenow == 'post.php' || $pagenow == 'post-new.php' || $pagenow == 'site-editor.php' || $pagenow == 'widgets.php') return;
             wp_enqueue_style('zolo-dashboard-css', trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/assets/css/dashboard.css', [], ZOLO_VERSION, 'all');
         }
         /**
@@ -344,25 +347,25 @@ if (! class_exists('Dashboard')) {
                 }
             );
 
-            if (!class_exists('Zolo_Blocks_Pro')) {
-                add_submenu_page(
-                    'zoloblocks',
-                    __('Upgrade', 'zoloblocks'),
-                    __('Upgrade', 'zoloblocks'),
-                    'manage_options',
-                    'zolo-pro',
-                    function () {
-                        echo '<script>document.location.href = "https://zoloblocks.com/pricing/";</script>';
-                    }
-                );
-                // add_submenu_page(
-                //     'zoloblocks',
-                //     __('Get Pro Version', 'zoloblocks'),
-                //     '<span style="color: #ef476f; font-weight: 600;">' . __('Black Friday Limited Offer Up To 87%', 'zoloblocks') . '</span>',
-                //     'manage_options',
-                //     'https://bdthemes.com/deals/?utm_source=WordPress_org&utm_medium=bfcm_cta&utm_campaign=zoloblocks'
-                // );
-            }
+            // if (!class_exists('Zolo_Blocks_Pro')) {
+            //     add_submenu_page(
+            //         'zoloblocks',
+            //         __('Upgrade', 'zoloblocks'),
+            //         __('Upgrade', 'zoloblocks'),
+            //         'manage_options',
+            //         'zolo-pro',
+            //         function () {
+            //             echo '<script>document.location.href = "https://zoloblocks.com/pricing/";</script>';
+            //         }
+            //     );
+            //     // add_submenu_page(
+            //     //     'zoloblocks',
+            //     //     __('Get Pro Version', 'zoloblocks'),
+            //     //     '<span style="color: #ef476f; font-weight: 600;">' . __('Black Friday Limited Offer Up To 87%', 'zoloblocks') . '</span>',
+            //     //     'manage_options',
+            //     //     'https://bdthemes.com/deals/?utm_source=WordPress_org&utm_medium=bfcm_cta&utm_campaign=zoloblocks'
+            //     // );
+            // }
         }
 
         /**

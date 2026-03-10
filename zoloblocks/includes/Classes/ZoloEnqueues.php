@@ -219,6 +219,14 @@ if (! class_exists('ZoloEnqueues')) {
                 ZOLO_VERSION,
                 true
             );
+
+            wp_register_script(
+                'zolo-tag-canvas-script',
+                trailingslashit(ZOLO_ADMIN_URL) . 'assets/js/tag-canvas/tagcanvas.min.js',
+                [],
+                ZOLO_VERSION,
+                true
+            );
         }
         /**
          * Load Block Editor Assets
@@ -267,13 +275,16 @@ if (! class_exists('ZoloEnqueues')) {
                     $editor_common_dep['version'],
                     true
                 );
-                wp_enqueue_style(
-                    'zolo-editor-common-style',
-                    trailingslashit(ZOLO_ADMIN_URL) . 'build/editor-common/style-index.css',
-                    [],
-                    $editor_common_dep['version'],
-                    'all'
-                );
+                $editor_common_css = trailingslashit(ZOLO_DIR_PATH) . 'build/editor-common/style-index.css';
+                if (file_exists($editor_common_css)) {
+                    wp_enqueue_style(
+                        'zolo-editor-common-style',
+                        trailingslashit(ZOLO_ADMIN_URL) . 'build/editor-common/style-index.css',
+                        [],
+                        $editor_common_dep['version'],
+                        'all'
+                    );
+                }
             }
 
             // template library
@@ -289,6 +300,7 @@ if (! class_exists('ZoloEnqueues')) {
                         $script_dependecy['version'],
                         true
                     );
+                    //TODO: need to load some part dynamically
                     wp_register_style('zolo-template-library-editor-style', trailingslashit(ZOLO_ADMIN_URL) . 'build/template-library/index.css', [], $script_dependecy['version'], 'all');
                     wp_enqueue_script('zolo-template-library-editor-script');
                     wp_enqueue_style('zolo-template-library-editor-style');
@@ -326,6 +338,7 @@ if (! class_exists('ZoloEnqueues')) {
                 'blocksPreview'  => apply_filters('zolo_blocks_preview', [
                     'advancedSearch' => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/advanced-search.svg',
                     'button'       => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/advanced-button.svg',
+                    'modal'       => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/modal.svg',
                     'businessHour' => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/business-hour.svg',
                     'heading'      => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/advanced-heading.svg',
                     'icon'         => trailingslashit(ZOLO_ADMIN_URL) . 'assets/blocks-preview/icon.svg',

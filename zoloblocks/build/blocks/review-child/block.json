@@ -4,7 +4,8 @@
   "name": "zolo/review-child",
   "category": "zoloblocks",
   "parent": [
-    "zolo/review-grid"
+    "zolo/review-grid",
+    "zolo/review-carousel"
   ],
   "keywords": [
     "Rating",

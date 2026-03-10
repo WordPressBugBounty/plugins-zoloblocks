@@ -29,5 +29,9 @@
     ]
   },
   "editorScript": "file:./index.js",
+  "viewScript": "file:./frontend.js",
+  "script": [
+    "zolo-tag-canvas-script"
+  ],
   "style": "file:./style-index.css"
 }
