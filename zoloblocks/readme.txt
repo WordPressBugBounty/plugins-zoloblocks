@@ -5,7 +5,7 @@ Tags: blocks, editor, gutenberg, gutenberg blocks, dynamic content
 Requires at least: 6.1
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 2.7.0
+Stable tag: 2.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -641,6 +641,17 @@ Please report security bugs found in the source code of the ZoloBlocks plugin th
 7. Check out our others popular plugin
 
 == Changelog ==
+
+### 2.7.1 [March 17, 2026]
+
+#### Improvements
+- **Typography:** Enhanced typography controls and consistency across all blocks. Full Google Fonts library is now available in the typography control.
+- **Heading Block:** Added margin options for improved spacing control.
+- **List Block:** Introduced heading option for better content organization.
+
+#### Tweaks
+- **List Block:** Removed default Facebook icon from the repeater control.
+
 ### 2.7.0 [March 10, 2026]
 
 #### New Features
