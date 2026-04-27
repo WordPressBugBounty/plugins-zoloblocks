@@ -2,6 +2,8 @@
 
 namespace Zolo\Classes;
 
+defined('ABSPATH') || exit;
+
 use Zolo\Traits\SingletonTrait;
 use Zolo\Helpers\ZoloHelpers;
 
@@ -29,17 +31,10 @@ class Registration {
 
         if (is_array($blocks) && count($blocks) > 0) {
             foreach ($blocks as $block) {
-                $block_path = trailingslashit(ZOLO_DIR_PATH);
-                $version = ZOLO_VERSION;
-
-                if (isset($block['is_pro']) && $block['is_pro'] === true) {
-                    // Check if Zoloblocks Pro is activated
-                    if (!class_exists('Zolo_Blocks_Pro')) {
-                        continue; // Skip pro blocks if pro version is not activated
-                    }
-                    $block_path = trailingslashit(ZOLO_PRO_DIR_PATH);
-                    $version = ZOLO_PRO_VERSION;
-                }
+                // Pro blocks provide their own 'block_path'; free blocks use the default.
+                $block_path = isset($block['block_path'])
+                    ? trailingslashit($block['block_path'])
+                    : trailingslashit(ZOLO_DIR_PATH);
 
                 $block_file = $block_path . '/build/blocks/' . $block['name'];
 
@@ -66,10 +61,10 @@ class Registration {
      */
     public function render_callback($attributes, $content, $block, $render) {
         if ($render !== false) {
-            return $render->render($attributes, $content, $block);
+            return wp_kses_post($render->render($attributes, $content, $block));
         }
 
-        return $content;
+        return is_string($content) ? wp_kses_post($content) : '';
     }
 
     /**

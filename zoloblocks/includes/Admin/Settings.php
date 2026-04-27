@@ -246,7 +246,7 @@ if (! class_exists('Settings')) {
                 [
                     'type'              => 'array',
                     'default'           => [],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_int_array'],
                     'show_in_rest'      => [
                         'schema' => [
                             'type'  => 'array',
@@ -266,7 +266,21 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'string'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
+                ]
+            );
+
+            // Opt-in: load Google Fonts catalog from WordPress.org mirror (no request when disabled).
+            register_setting(
+                'zolo_blocks_settings_group',
+                'zolo_allow_remote_google_fonts_catalog',
+                [
+                    'type'              => 'boolean',
+                    'default'           => false,
+                    'show_in_rest'      => [
+                        'schema' => ['type' => 'boolean'],
+                    ],
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
             // register zolo zoloai api key setting
@@ -279,7 +293,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'string'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
 
@@ -293,7 +307,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'string'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
             // register support svg
@@ -306,7 +320,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'boolean'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
 
@@ -322,7 +336,7 @@ if (! class_exists('Settings')) {
                             'type' => 'boolean',
                         ],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
             register_setting(
@@ -336,7 +350,7 @@ if (! class_exists('Settings')) {
                             'type' => 'boolean',
                         ],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
             // register support maintenance mode template
@@ -351,7 +365,7 @@ if (! class_exists('Settings')) {
                             'type' => 'string',
                         ],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
 
@@ -366,7 +380,7 @@ if (! class_exists('Settings')) {
                             'type' => 'boolean',
                         ],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
             register_setting(
@@ -380,7 +394,7 @@ if (! class_exists('Settings')) {
                             'type' => 'string',
                         ],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
 
@@ -394,7 +408,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'boolean'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
 
@@ -408,7 +422,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'string'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
 
@@ -422,7 +436,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'string'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
             // mailchimp API key
@@ -435,7 +449,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'string'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
 
@@ -449,7 +463,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'string'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => 'sanitize_text_field',
                 ]
             );
             register_setting(
@@ -461,7 +475,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'boolean'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
             register_setting(
@@ -473,7 +487,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'boolean'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
             register_setting(
@@ -485,7 +499,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'boolean'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
 
@@ -498,7 +512,7 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'boolean'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
 
@@ -509,7 +523,7 @@ if (! class_exists('Settings')) {
                 [
                     'type'              => 'array',
                     'default'           => [],
-                    'sanitize_callback' => null, // Add a custom sanitize callback if necessary
+                    'sanitize_callback' => [$this, 'sanitize_webhooks'], // Sanitizes label/url pairs
                     'show_in_rest'      => [
                         'schema' => [
                             'type'  => 'array',
@@ -539,9 +553,55 @@ if (! class_exists('Settings')) {
                     'show_in_rest'      => [
                         'schema' => ['type' => 'boolean'],
                     ],
-                    'sanitize_callback' => NULL,
+                    'sanitize_callback' => [$this, 'sanitize_bool'],
                 ]
             );
+        }
+
+        /**
+         * Sanitize a boolean-ish option value.
+         *
+         * @param mixed $value Raw option value.
+         * @return bool
+         */
+        public function sanitize_bool($value) {
+            return (bool) rest_sanitize_boolean($value);
+        }
+
+        /**
+         * Sanitize an array of integers (e.g. list of template IDs).
+         *
+         * @param mixed $value Raw option value.
+         * @return array
+         */
+        public function sanitize_int_array($value) {
+            if (!is_array($value)) {
+                return [];
+            }
+            return array_values(array_map('absint', $value));
+        }
+
+        /**
+         * Sanitize the webhooks array. Each entry is expected to contain a label and a url.
+         *
+         * @param mixed $value Raw option value.
+         * @return array
+         */
+        public function sanitize_webhooks($value) {
+            if (!is_array($value)) {
+                return [];
+            }
+            $sanitized = [];
+            foreach ($value as $item) {
+                if (!is_array($item)) {
+                    continue;
+                }
+                $sanitized[] = [
+                    'label' => isset($item['label']) ? sanitize_text_field($item['label']) : '',
+                    'url'   => isset($item['url']) ? esc_url_raw($item['url']) : '',
+                ];
+            }
+            return $sanitized;
         }
 
         /**
