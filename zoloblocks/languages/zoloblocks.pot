@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ZoloBlocks 2.7.7\n"
+"Project-Id-Version: ZoloBlocks 2.7.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zoloblocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-21T08:34:00+00:00\n"
+"POT-Creation-Date: 2026-07-26T05:55:06+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zoloblocks\n"
@@ -1313,7 +1313,7 @@ msgstr ""
 
 #: includes/zoloblocks-loader.php:62
 #: src/admin/constants/index.js:34
-#: src/admin/dashboard/index.js:65
+#: src/admin/dashboard/index.js:93
 msgid "Get Pro"
 msgstr ""
 
@@ -1500,7 +1500,7 @@ msgstr ""
 #: src/admin/dashboard/API-Settings/setting-panel.js:109
 #: src/admin/dashboard/Blocks/single-block.js:156
 #: src/admin/dashboard/Extensions/single-extension.js:173
-#: src/admin/dashboard/Settings/setting-box.js:28
+#: src/admin/dashboard/Settings/setting-box.js:9
 msgid "Coming Soon"
 msgstr ""
 
@@ -1593,7 +1593,7 @@ msgstr ""
 
 #: src/admin/dashboard/Blocks/single-block.js:51
 #: src/admin/dashboard/Extensions/single-extension.js:51
-#: src/admin/dashboard/index.js:135
+#: src/admin/dashboard/index.js:159
 #: src/template-library/pro-popup.js:71
 msgid "Upgrade Now"
 msgstr ""
@@ -1610,7 +1610,7 @@ msgstr ""
 
 #: src/admin/dashboard/Blocks/single-block.js:151
 #: src/admin/dashboard/Extensions/single-extension.js:149
-#: src/admin/dashboard/Settings/setting-box.js:22
+#: src/admin/dashboard/Settings/setting-box.js:27
 #: src/admin/dashboard/Upgrade/index.js:300
 #: src/controls/popover-control/index.js:25
 #: src/controls/thumbs-control/index.js:51
@@ -1627,8 +1627,22 @@ msgstr ""
 msgid "Others"
 msgstr ""
 
-#: src/admin/dashboard/index.js:127
+#: src/admin/dashboard/index.js:151
 msgid "Upgrade to Premium to get all the features"
+msgstr ""
+
+#: src/admin/dashboard/index.js:179
+#: src/admin/dashboard/index.js:182
+#: src/blocks/navigation-submenu/inspector.js:108
+msgid "Menu"
+msgstr ""
+
+#: src/admin/dashboard/index.js:187
+msgid "Close menu"
+msgstr ""
+
+#: src/admin/dashboard/index.js:209
+msgid "Open menu"
 msgstr ""
 
 #: src/admin/dashboard/Settings/index.js:40
@@ -1638,6 +1652,8 @@ msgstr ""
 
 #: src/admin/dashboard/Settings/index.js:41
 #: src/admin/dashboard/Settings/index.js:56
+#: src/admin/dashboard/Settings/index.js:498
+#: src/admin/dashboard/Settings/index.js:583
 #: src/extensions/AI/popup/components/footer/index.js:68
 msgid "Copy"
 msgstr ""
@@ -1722,46 +1738,55 @@ msgstr ""
 msgid "If you're encountering issues with style, layout, color, or any other page element, use this option to regenerate the CSS and JavaScript assets. It can help resolve various asset-related problems."
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:424
+#: src/admin/dashboard/Settings/index.js:430
 msgid "Coming Soon Mode"
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:426
+#: src/admin/dashboard/Settings/index.js:432
+msgid "HTTP 200"
+msgstr ""
+
+#: src/admin/dashboard/Settings/index.js:436
 msgid "If your website is still under construction and not ready for public viewing, the 'Coming Soon' page will return an HTTP 200 status code."
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:434
-#: src/admin/dashboard/Settings/index.js:502
-msgid "Select Templates"
+#: src/admin/dashboard/Settings/index.js:457
+#: src/admin/dashboard/Settings/index.js:542
+msgid "Template page"
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:435
-#: src/admin/dashboard/Settings/index.js:503
-msgid "`To enable maintenance mode you have to set a template for the maintenance mode page.Select one or go ahead and create one now`"
+#: src/admin/dashboard/Settings/index.js:469
+#: src/admin/dashboard/Settings/index.js:554
+msgid "Create page"
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:445
-#: src/admin/dashboard/Settings/index.js:513
-msgid "Share your site with a private link"
+#: src/admin/dashboard/Settings/index.js:477
+#: src/admin/dashboard/Settings/index.js:562
+msgid "Private preview link"
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:446
-#: src/admin/dashboard/Settings/index.js:514
-msgid "Allow your site to be visible to only those with the private link. This is useful when you want to share your site with a select group of people or clients before it goes live."
+#: src/admin/dashboard/Settings/index.js:484
+msgid "People with this link can view the live site while Coming Soon is on."
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:476
-#: src/admin/dashboard/Settings/index.js:543
-#: src/admin/dashboard/Settings/index.js:577
-msgid "Create New Page"
-msgstr ""
-
-#: src/admin/dashboard/Settings/index.js:492
+#: src/admin/dashboard/Settings/index.js:515
 msgid "Maintenance Mode"
 msgstr ""
 
-#: src/admin/dashboard/Settings/index.js:494
-msgid "Maintenance Mode in ZoloBlocks uses an HTTP 503 status code, signaling search engines to revisit the site shortly. Limit its use to a few days to avoid prolonged downtime."
+#: src/admin/dashboard/Settings/index.js:517
+msgid "HTTP 503"
+msgstr ""
+
+#: src/admin/dashboard/Settings/index.js:521
+msgid "Maintenance Mode uses an HTTP 503 status code, signaling search engines to revisit shortly. Limit its use to a few days to avoid prolonged downtime."
+msgstr ""
+
+#: src/admin/dashboard/Settings/index.js:569
+msgid "People with this link can view the live site while Maintenance Mode is on."
+msgstr ""
+
+#: src/admin/dashboard/Settings/index.js:612
+msgid "Create New Page"
 msgstr ""
 
 #: src/admin/dashboard/Upgrade/index.js:73
@@ -8923,10 +8948,6 @@ msgstr ""
 #: src/blocks/navigation-submenu/edit.js:55
 #: src/blocks/navigation/components/appender-button.js:13
 msgid "Add Menu Item"
-msgstr ""
-
-#: src/blocks/navigation-submenu/inspector.js:108
-msgid "Menu"
 msgstr ""
 
 #: src/blocks/navigation/components/appender-button.js:13
