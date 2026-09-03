@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ZoloBlocks 2.7.9\n"
+"Project-Id-Version: ZoloBlocks 2.7.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zoloblocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-12T09:35:10+00:00\n"
+"POT-Creation-Date: 2026-09-01T12:05:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zoloblocks\n"
@@ -267,16 +267,16 @@ msgstr ""
 msgid "Session Expired!!"
 msgstr ""
 
-#: includes/API/GoogleFonts.php:92
-msgid "Failed to fetch Google Fonts collection."
+#: includes/API/GoogleFonts.php:96
+msgid "The Google Fonts collection is not registered on this site."
 msgstr ""
 
-#: includes/API/GoogleFonts.php:101
-msgid "Google Fonts endpoint returned an error."
+#: includes/API/GoogleFonts.php:106
+msgid "Failed to fetch the Google Fonts collection."
 msgstr ""
 
-#: includes/API/GoogleFonts.php:112
-msgid "Invalid response from Google Fonts endpoint."
+#: includes/API/GoogleFonts.php:114
+msgid "The Google Fonts collection returned no font families."
 msgstr ""
 
 #: includes/API/ZoloAi.php:49
@@ -739,42 +739,42 @@ msgstr ""
 msgid "Dual Button"
 msgstr ""
 
-#: includes/Blocks/Breadcrumbs.php:239
+#: includes/Blocks/Breadcrumbs.php:244
 #: src/blocks/breadcrumbs/inspector.js:144
 #: src/blocks/breadcrumbs/inspector.js:309
 msgid "Home"
 msgstr ""
 
-#: includes/Blocks/Breadcrumbs.php:254
+#: includes/Blocks/Breadcrumbs.php:259
 msgid "Error 404"
 msgstr ""
 
 #. translators: %s is the name of the current product tag term.
-#: includes/Blocks/Breadcrumbs.php:408
+#: includes/Blocks/Breadcrumbs.php:413
 #, php-format
 msgid "Products tagged &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: %s: tag name
-#: includes/Blocks/Breadcrumbs.php:565
+#: includes/Blocks/Breadcrumbs.php:570
 #, php-format
 msgid "Posts tagged &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: %s: author name
-#: includes/Blocks/Breadcrumbs.php:632
+#: includes/Blocks/Breadcrumbs.php:637
 #, php-format
 msgid "Author: %s"
 msgstr ""
 
 #. translators: %s: search term
-#: includes/Blocks/Breadcrumbs.php:675
+#: includes/Blocks/Breadcrumbs.php:680
 #, php-format
 msgid "Search results for &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: %d: page number
-#: includes/Blocks/Breadcrumbs.php:685
+#: includes/Blocks/Breadcrumbs.php:690
 #, php-format
 msgid "Page %d"
 msgstr ""
