@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ZoloBlocks 2.7.10\n"
+"Project-Id-Version: ZoloBlocks 2.7.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zoloblocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-01T12:05:59+00:00\n"
+"POT-Creation-Date: 2026-09-21T10:44:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zoloblocks\n"
@@ -240,20 +240,14 @@ msgstr ""
 #: includes/Admin/Settings.php:709
 #: includes/Admin/Settings.php:772
 #: includes/Admin/Settings.php:823
-#: includes/Helpers/Settings.php:127
-#: includes/Helpers/Settings.php:174
-#: includes/Helpers/Settings.php:223
 msgid "Invalid request."
 msgstr ""
 
 #: includes/Admin/Settings.php:750
-#: includes/Helpers/Settings.php:145
-#: includes/Helpers/Settings.php:241
 msgid "Invalid block name(s) provided."
 msgstr ""
 
 #: includes/Admin/Settings.php:802
-#: includes/Helpers/Settings.php:204
 msgid "Invalid favorite id provided."
 msgstr ""
 
@@ -840,16 +834,16 @@ msgstr ""
 msgid " %1$s%2$s. %3$s%4$s%5$s"
 msgstr ""
 
-#: includes/Blocks/PostContent.php:39
+#: includes/Blocks/PostContent.php:40
 msgid "[block rendering halted]"
 msgstr ""
 
-#: includes/Blocks/PostMeta.php:162
+#: includes/Blocks/PostMeta.php:163
 msgid "No Comments"
 msgstr ""
 
 #. translators: %s: number of comments
-#: includes/Blocks/PostMeta.php:166
+#: includes/Blocks/PostMeta.php:167
 #, php-format
 msgid "%s Comment"
 msgid_plural "%s Comments"
@@ -857,7 +851,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %d: estimated reading time in minutes
-#: includes/Blocks/PostMeta.php:183
+#: includes/Blocks/PostMeta.php:184
 #: src/blocks/post-meta/meta-item.js:136
 #, php-format,js-format
 msgid "%d Min Read"
@@ -927,7 +921,7 @@ msgstr ""
 msgid "Invalid settings data"
 msgstr ""
 
-#: includes/Classes/ZoloAJAX.php:556
+#: includes/Classes/ZoloAJAX.php:564
 msgid "Nonce did not match"
 msgstr ""
 
@@ -1054,7 +1048,7 @@ msgstr ""
 msgid "Recaptcha validation failed"
 msgstr ""
 
-#: includes/Form/Form.php:345
+#: includes/Form/Form.php:347
 #: includes/Form/FormEntries.php:143
 #: src/blocks/qrcode/inspector.js:233
 msgid "Subject"
