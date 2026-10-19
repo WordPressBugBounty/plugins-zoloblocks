@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ZoloBlocks 2.7.12\n"
+"Project-Id-Version: ZoloBlocks 2.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zoloblocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-21T10:44:02+00:00\n"
+"POT-Creation-Date: 2026-10-19T05:02:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zoloblocks\n"
@@ -1267,18 +1267,18 @@ msgstr ""
 msgid "Description."
 msgstr ""
 
-#: includes/Popup/PopupBuilder.php:174
+#: includes/Popup/PopupBuilder.php:199
 msgid "Trigger"
 msgstr ""
 
-#: includes/Popup/PopupBuilder.php:175
+#: includes/Popup/PopupBuilder.php:200
 #: src/blocks/profile-card/inspector.js:227
 #: src/blocks/profile-card/inspector.js:403
 #: src/blocks/profile-card/inspector.js:740
 msgid "Status"
 msgstr ""
 
-#: includes/Popup/PopupBuilder.php:176
+#: includes/Popup/PopupBuilder.php:201
 #: src/blocks/post-category/constants/index.js:11
 #: src/blocks/post-comments/constants/index.js:11
 #: src/blocks/post-comments/inspector.js:107
@@ -1293,15 +1293,15 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: includes/Popup/PopupBuilder.php:213
+#: includes/Popup/PopupBuilder.php:238
 msgid "Unauthorized access!"
 msgstr ""
 
-#: includes/Popup/PopupBuilder.php:222
+#: includes/Popup/PopupBuilder.php:247
 msgid "Post ID is missing!"
 msgstr ""
 
-#: includes/Popup/PopupBuilder.php:235
+#: includes/Popup/PopupBuilder.php:260
 msgid "Popup status updated!"
 msgstr ""
 
