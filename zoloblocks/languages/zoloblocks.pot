@@ -2,22 +2,23 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ZoloBlocks 2.8.0\n"
+"Project-Id-Version: ZoloBlocks 2.8.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zoloblocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-19T05:02:20+00:00\n"
+"POT-Creation-Date: 2026-10-20T11:09:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zoloblocks\n"
 
 #. Plugin Name of the plugin
 #: zoloblocks.php
-#: includes/Admin/Dashboard.php:118
-#: includes/Admin/Dashboard.php:119
+#: includes/Admin/Dashboard.php:61
+#: includes/Admin/Dashboard.php:203
+#: includes/Admin/Dashboard.php:204
 #: includes/Classes/Registration.php:100
 #: src/controls/zolo-icon-picker/index.js:246
 msgid "ZoloBlocks"
@@ -88,42 +89,46 @@ msgstr ""
 msgid "Dribbble"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:129
-#: includes/Admin/Dashboard.php:130
+#: includes/Admin/Dashboard.php:62
+msgid "Up To 86% Off"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:214
+#: includes/Admin/Dashboard.php:215
 msgid "Dashboard"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:137
-#: includes/Admin/Dashboard.php:138
+#: includes/Admin/Dashboard.php:222
+#: includes/Admin/Dashboard.php:223
 #: src/admin/constants/index.js:11
 #: src/admin/dashboard/Upgrade/index.js:195
 msgid "Blocks"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:146
-#: includes/Admin/Dashboard.php:147
+#: includes/Admin/Dashboard.php:231
+#: includes/Admin/Dashboard.php:232
 #: src/admin/constants/index.js:16
 #: src/admin/dashboard/Upgrade/index.js:235
 #: src/admin/dashboard/Welcome/index.js:81
 msgid "Extensions"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:154
-#: includes/Admin/Dashboard.php:155
+#: includes/Admin/Dashboard.php:239
+#: includes/Admin/Dashboard.php:240
 #: src/admin/constants/index.js:21
 msgid "API Settings"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:162
-#: includes/Admin/Dashboard.php:163
+#: includes/Admin/Dashboard.php:247
+#: includes/Admin/Dashboard.php:248
 #: includes/zoloblocks-loader.php:59
 #: src/admin/constants/index.js:26
 #: src/blocks/google-map/inspector.js:250
 msgid "Settings"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:171
-#: includes/Admin/Dashboard.php:172
+#: includes/Admin/Dashboard.php:256
+#: includes/Admin/Dashboard.php:257
 #: includes/Blocks/Blocks.php:251
 #: includes/Popup/PopupBuilder.php:48
 #: includes/Popup/PopupBuilder.php:49
@@ -132,8 +137,8 @@ msgstr ""
 msgid "Popup Builder"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:179
-#: includes/Admin/Dashboard.php:180
+#: includes/Admin/Dashboard.php:264
+#: includes/Admin/Dashboard.php:265
 msgid "Form Entries"
 msgstr ""
 
@@ -283,6 +288,30 @@ msgstr ""
 
 #: includes/API/ZoloAi.php:100
 msgid "The API returned an invalid response."
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:119
+msgid "Build More. Spend Less."
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:120
+msgid "Save Up to $4,899"
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:122
+msgid "Customize your agency bundle with 14 plugins to choose from Element Pack, Post Kit, Store Kit, Prime Slider, Pixel Gallery, One Accessibility, Spin Wheel & more."
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:124
+msgid "Grab the Deal"
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:125
+msgid "Don’t Show Again"
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:128
+msgid "Up To 86% OFF, 60 Days Money Back Guarantee"
 msgstr ""
 
 #: includes/Blocks/Blocks.php:9
